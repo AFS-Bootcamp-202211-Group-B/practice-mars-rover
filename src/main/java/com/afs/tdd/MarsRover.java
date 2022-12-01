@@ -18,7 +18,7 @@ public class MarsRover {
         this.direction = direction;
     }
 
-    public void executeCommand(String command) {
+    public void executeBatchCommand(String command) {
         if(command.equals(MOVE)){
             move();
         }

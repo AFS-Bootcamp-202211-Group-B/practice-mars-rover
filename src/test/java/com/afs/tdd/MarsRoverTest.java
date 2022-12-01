@@ -1,17 +1,16 @@
 package com.afs.tdd;
 
-import com.sun.webkit.WebPage;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class MarsRoverTest {
     @Test
-    void should_go_to_0_1_N_when_execute_command_given_0_0_N_and_M() {
+    void should_go_to_0_1_N_when_execute_batch_command_given_0_0_N_and_M() {
         //given
         MarsRover marsRover = new MarsRover(0, 0, "N");
         //when
-        marsRover.executeCommand("M");
+        marsRover.executeBatchCommand("M");
         //then
         assertEquals(0, marsRover.getLocationX());
         assertEquals(1, marsRover.getLocationY());
@@ -19,11 +18,11 @@ class MarsRoverTest {
     }
 
     @Test
-    void should_go_to_0_negative1_S_when_execute_command_given_0_0_S_and_M() {
+    void should_go_to_0_negative1_S_when_execute_batch_command_given_0_0_S_and_M() {
         //given
         MarsRover marsRover = new MarsRover(0, 0, "S");
         //when
-        marsRover.executeCommand("M");
+        marsRover.executeBatchCommand("M");
         //then
         assertEquals(0, marsRover.getLocationX());
         assertEquals(-1,marsRover.getLocationY());
@@ -31,11 +30,11 @@ class MarsRoverTest {
     }
 
     @Test
-    void should_go_to_negative1_0_W_when_execute_command_given_0_0_W_and_M() {
+    void should_go_to_negative1_0_W_when_execute_batch_command_given_0_0_W_and_M() {
         //given
         MarsRover marsRover = new MarsRover(0, 0, "W");
         //when
-        marsRover.executeCommand("M");
+        marsRover.executeBatchCommand("M");
         //then
         assertEquals(-1,marsRover.getLocationX());
         assertEquals(0,marsRover.getLocationY());
@@ -44,11 +43,11 @@ class MarsRoverTest {
     }
 
     @Test
-    void should_go_to_1_0_E_when_execute_command_given_0_0_E_and_M() {
+    void should_go_to_1_0_E_when_execute_batch_command_given_0_0_E_and_M() {
         //given
         MarsRover marsRover = new MarsRover(0, 0, "E");
         //when
-        marsRover.executeCommand("M");
+        marsRover.executeBatchCommand("M");
         //then
         assertEquals(1, marsRover.getLocationX());
         assertEquals(0, marsRover.getLocationY());
@@ -57,11 +56,11 @@ class MarsRoverTest {
     }
 
     @Test
-    void should_go_to_0_0_W_when_execute_command_given_0_0_N_and_L() {
+    void should_go_to_0_0_W_when_execute_batch_command_given_0_0_N_and_L() {
         //given
         MarsRover marsRover = new MarsRover(0, 0, "N");
         //when
-        marsRover.executeCommand("L");
+        marsRover.executeBatchCommand("L");
         //then
         assertEquals(0, marsRover.getLocationX());
         assertEquals(0, marsRover.getLocationY());
@@ -69,11 +68,11 @@ class MarsRoverTest {
     }
 
     @Test
-    void should_go_to_0_0_E_when_execute_command_given_0_0_S_and_L() {
+    void should_go_to_0_0_E_when_execute_batch_command_given_0_0_S_and_L() {
         //given
         MarsRover marsRover = new MarsRover(0, 0, "S");
         //when
-        marsRover.executeCommand("L");
+        marsRover.executeBatchCommand("L");
         //then
         assertEquals(0,marsRover.getLocationX());
         assertEquals(0,marsRover.getLocationY());
@@ -81,11 +80,11 @@ class MarsRoverTest {
     }
 
     @Test
-    void should_go_to_0_0_S_when_execute_command_given_0_0_W_and_L() {
+    void should_go_to_0_0_S_when_execute_batch_command_given_0_0_W_and_L() {
         //given
         MarsRover marsRover = new MarsRover(0, 0, "W");
         //when
-        marsRover.executeCommand("L");
+        marsRover.executeBatchCommand("L");
         //then
         assertEquals(0, marsRover.getLocationX());
         assertEquals(0, marsRover.getLocationY());
@@ -93,11 +92,11 @@ class MarsRoverTest {
     }
 
     @Test
-    void should_go_to_0_0_N_when_execute_command_given_0_0_E_and_L() {
+    void should_go_to_0_0_N_when_execute_batch_command_given_0_0_E_and_L() {
         //given
         MarsRover marsRover = new MarsRover(0, 0, "E");
         //when
-        marsRover.executeCommand("L");
+        marsRover.executeBatchCommand("L");
         //then
         assertEquals(0,marsRover.getLocationX());
         assertEquals(0,marsRover.getLocationY());
@@ -105,11 +104,11 @@ class MarsRoverTest {
     }
 
     @Test
-    void should_go_to_0_0_E_when_execute_command_given_0_0_N_and_R() {
+    void should_go_to_0_0_E_when_execute_batch_command_given_0_0_N_and_R() {
         //given
         MarsRover marsRover = new MarsRover(0, 0, "N");
         //when
-        marsRover.executeCommand("R");
+        marsRover.executeBatchCommand("R");
         //then
         assertEquals(0,marsRover.getLocationX());
         assertEquals(0,marsRover.getLocationY());
@@ -117,11 +116,11 @@ class MarsRoverTest {
     }
 
     @Test
-    void should_go_to_0_0_W_when_execute_command_given_0_0_S_and_R() {
+    void should_go_to_0_0_W_when_execute_batch_command_given_0_0_S_and_R() {
         //given
         MarsRover marsRover = new MarsRover(0, 0, "S");
         //when
-        marsRover.executeCommand("R");
+        marsRover.executeBatchCommand("R");
         //then
         assertEquals(0,marsRover.getLocationX());
         assertEquals(0,marsRover.getLocationY());
@@ -129,11 +128,11 @@ class MarsRoverTest {
     }
 
     @Test
-    void should_go_to_0_0_N_when_execute_command_given_0_0_W_and_R() {
+    void should_go_to_0_0_N_when_execute_batch_command_given_0_0_W_and_R() {
         //given
         MarsRover marsRover = new MarsRover(0,0,"W");
         //when
-        marsRover.executeCommand("R");
+        marsRover.executeBatchCommand("R");
         //then
         assertEquals(0,marsRover.getLocationX());
         assertEquals(0,marsRover.getLocationY());
@@ -141,11 +140,11 @@ class MarsRoverTest {
     }
 
     @Test
-    void should_go_to_0_0_S_when_execute_command_given_0_0_E_and_R() {
+    void should_go_to_0_0_S_when_execute_batch_command_given_0_0_E_and_R() {
         //given
         MarsRover marsRover = new MarsRover(0, 0, "E");
         //when
-        marsRover.executeCommand("R");
+        marsRover.executeBatchCommand("R");
         //then
         assertEquals(0, marsRover.getLocationX());
         assertEquals(0, marsRover.getLocationY());
