@@ -60,6 +60,10 @@ public class MarsRover {
                 direction = Direction.W;
                 break;
             }
+            case S : {
+                direction = Direction.E;
+                break;
+            }
         }
     }
 
