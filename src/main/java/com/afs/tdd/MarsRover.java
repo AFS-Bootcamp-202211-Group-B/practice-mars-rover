@@ -3,16 +3,14 @@ package com.afs.tdd;
 import java.util.Arrays;
 import java.util.List;
 
-import static java.nio.file.Files.move;
-
 public class MarsRover {
-    public static final String MOVE = "M";
-    public static final String LEFT = "L";
-    public static final String RIGHT = "R";
-    public static final String NORTH = "N";
-    public static final String EAST = "E";
-    public static final String SOUTH = "S";
-    public static final String WEST = "W";
+    protected static final String MOVE = "M";
+    protected static final String LEFT = "L";
+    protected static final String RIGHT = "R";
+    protected static final String NORTH = "N";
+    protected static final String EAST = "E";
+    protected static final String SOUTH = "S";
+    protected static final String WEST = "W";
     private int locationX;
     private int locationY;
     private String direction;
@@ -78,15 +76,15 @@ public class MarsRover {
         }
     }
 
-    public int getLocationX() {
+    protected int getLocationX() {
         return locationX;
     }
 
-    public int getLocationY() {
+    protected int getLocationY() {
         return locationY;
     }
 
-    public String getDirection() {
+    protected String getDirection() {
         return direction;
     }
 }
