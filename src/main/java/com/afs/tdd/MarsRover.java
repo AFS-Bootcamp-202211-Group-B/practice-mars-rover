@@ -8,11 +8,16 @@ public class MarsRover {
     public MarsRover(char direction){
         this.direction = direction;
     }
+    public MarsRover(int locationX, int locationY, char direction){
+        this.locationX = locationX;
+        this.locationY = locationY;
+        this.direction = direction;
+    }
     public void executeBatchCommands(String command){
 
     }
     private void move(String command){
-        
+
     }
     private String turnLeft(String direction){
         return "";
