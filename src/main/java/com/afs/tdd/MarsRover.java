@@ -20,11 +20,23 @@ public class MarsRover {
     }
 
     public void executeCommand(String command) {
-
+        switch (command) {
+            case "M":
+                move();
+                break;
+            case "L":
+                turnLeft();
+                break;
+            case "R":
+                turnRight();
+                break;
+            default:
+                return;
+        }
     }
 
-    private void move(String command) {
-        switch (command) {
+    private void move() {
+        switch (direction) {
             case "N":
                 locationY += 1;
                 break;
@@ -42,38 +54,38 @@ public class MarsRover {
         }
     }
 
-    private void turnLeft(String direction) {
+    private void turnLeft() {
         switch (direction) {
             case "N":
-                this.direction = "W";
+                direction = "W";
                 break;
             case "E":
-                this.direction = "N";
+                direction = "N";
                 break;
             case "S":
-                this.direction = "E";
+                direction = "E";
                 break;
             case "W":
-                this.direction = "S";
+                direction = "S";
                 break;
             default:
                 return;
         }
     }
 
-    private void turnRight(String direction) {
+    private void turnRight() {
         switch (direction) {
             case "N":
-                this.direction = "E";
+                direction = "E";
                 break;
             case "E":
-                this.direction = "S";
+                direction = "S";
                 break;
             case "S":
-                this.direction = "W";
+                direction = "W";
                 break;
             case "W":
-                this.direction = "N";
+                direction = "N";
                 break;
             default:
                 return;
