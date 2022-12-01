@@ -3,26 +3,26 @@ package com.afs.tdd;
 public class MarsRover {
     private int locationX;
     private int locationY;
-    private String direction;
+    private Direction direction;
 
-    public MarsRover(int locationX, int locationY, String direction) {
+    public MarsRover(int locationX, int locationY, Direction direction) {
         this.locationX = locationX;
         this.locationY = locationY;
         this.direction = direction;
     }
 
-    public void executeBatchCommands(String command) {
+    public void executeBatchCommands(Command command) {
         switch (command){
-            case "M": {
+            case M: {
                 moveForward(locationX, locationY, direction);
                 break;
             }
         }
     }
 
-    private void moveForward(int locationX, int locationY, String direction) {
+    private void moveForward(int locationX, int locationY, Direction direction) {
         switch (direction){
-            case "N": {
+            case N: {
                 addLocationY();
                 break;
             }

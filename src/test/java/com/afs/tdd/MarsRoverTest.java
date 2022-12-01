@@ -8,9 +8,9 @@ class MarsRoverTest {
     @Test
     void should_return_0_1_N_when_executeCommand_given_0_0_N_M() {
         //given
-        MarsRover marsRover = new MarsRover(0, 0, "N");
+        MarsRover marsRover = new MarsRover(0, 0, Direction.N);
         //when
-        marsRover.executeBatchCommands("M");
+        marsRover.executeBatchCommands(Command.M);
         //then
         assertEquals(1, marsRover.getLocationY());
     }
