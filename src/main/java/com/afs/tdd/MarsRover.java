@@ -11,7 +11,11 @@ public class MarsRover {
         this.direction = direction;
     }
 
-    public void executeBatchCommands(Command command) {
+    public void executeBatchCommands(List<Command> commands) {
+
+    }
+
+    public void executeCommands(Command command) {
         switch (command){
             case M: {
                 moveForward();

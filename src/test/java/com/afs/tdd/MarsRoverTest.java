@@ -2,6 +2,9 @@ package com.afs.tdd;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.Arrays;
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class MarsRoverTest {
@@ -114,11 +117,12 @@ class MarsRoverTest {
         assertEquals(Direction.N, marsRover.getDirection());
     }
     @Test
-    void should_return_negative1_1_N_when_executeCommand_given_0_0_N_MNMR() {
+    void should_return_negative1_1_N_when_executeCommand_given_0_0_N_MLMR() {
         //given
         MarsRover marsRover = new MarsRover(0, 0, Direction.W);
+        List<Command> commands = Arrays.asList(Command.M, Command.L, Command.M, Command.R);
         //when
-        marsRover.executeBatchCommands(Command.R);
+        marsRover.executeBatchCommands(commands);
         //then
         assertEquals(Direction.N, marsRover.getDirection());
         assertEquals(0xffffffff, marsRover.getLocationX());
