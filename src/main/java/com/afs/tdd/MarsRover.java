@@ -1,5 +1,7 @@
 package com.afs.tdd;
 
+import java.util.Arrays;
+
 public class MarsRover {
     private int locationX = 0;
     private int locationY = 0;
@@ -16,7 +18,7 @@ public class MarsRover {
     }
 
     public void executeBatchCommands(String command) {
-
+        Arrays.stream(command.split("")).forEach(cmd -> executeCommand(cmd));
     }
 
     public void executeCommand(String command) {
