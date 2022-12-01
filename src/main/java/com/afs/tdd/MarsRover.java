@@ -20,11 +20,31 @@ public class MarsRover {
                 turnLeft();
                 break;
             case "R":
+                turnRight();
                 break;
             default:
                 break;
         }
 
+    }
+
+    private void turnRight() {
+        switch(this.direction){
+            case "N":
+                this.direction="E";
+                break;
+            case "E":
+                this.direction="S";
+                break;
+            case "S":
+                this.direction="W";
+                break;
+            case "W":
+                this.direction="N";
+                break;
+            default:
+                break;
+        }
     }
 
     private void turnLeft() {
