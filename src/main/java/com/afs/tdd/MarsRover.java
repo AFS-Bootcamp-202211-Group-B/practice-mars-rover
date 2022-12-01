@@ -59,7 +59,15 @@ public class MarsRover {
                 addLocationX();
                 break;
             }
+            case W: {
+                minusLocationX();
+                break;
+            }
         }
+    }
+
+    private void minusLocationX() {
+        this.locationX--;
     }
 
     private void addLocationX() {
