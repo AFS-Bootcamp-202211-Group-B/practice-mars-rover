@@ -1,6 +1,13 @@
 package com.afs.tdd;
 
 public class MarsRover {
+    public static final String MOVE = "M";
+    public static final String LEFT = "L";
+    public static final String RIGHT = "R";
+    public static final String NORTH = "N";
+    public static final String EAST = "E";
+    public static final String SOUTH = "S";
+    public static final String WEST = "W";
     private int locationX;
     private int locationY;
     private String direction;
@@ -12,38 +19,38 @@ public class MarsRover {
     }
 
     public void executeCommand(String command) {
-        if(command.equals("M")){
+        if(command.equals(MOVE)){
             move();
         }
-        if(command.equals("L")){
+        if(command.equals(LEFT)){
             turnLeft();
         }
-        if(command.equals("R")){
+        if(command.equals(RIGHT)){
             turnRight();
         }
     }
 
     private void turnRight() {
-        if(direction.equals("N")){
-            setDirection("E");
-        } else if (direction.equals("S")) {
-            setDirection("W");
-        } else if (direction.equals("W")) {
-            setDirection("N");
-        } else if (direction.equals("E")) {
-            setDirection("S");
+        if(direction.equals(NORTH)){
+            setDirection(EAST);
+        } else if (direction.equals(SOUTH)) {
+            setDirection(WEST);
+        } else if (direction.equals(WEST)) {
+            setDirection(NORTH);
+        } else if (direction.equals(EAST)) {
+            setDirection(SOUTH);
         }
     }
 
     private void turnLeft() {
-        if(direction.equals("N")){
-            setDirection("W");
-        } else if (direction.equals("S")) {
-            setDirection("E");
-        } else if (direction.equals("W")) {
-            setDirection("S");
-        } else if (direction.equals("E")) {
-            setDirection("N");
+        if(direction.equals(NORTH)){
+            setDirection(WEST);
+        } else if (direction.equals(SOUTH)) {
+            setDirection(EAST);
+        } else if (direction.equals(WEST)) {
+            setDirection(SOUTH);
+        } else if (direction.equals(EAST)) {
+            setDirection(NORTH);
         }
     }
 
@@ -52,13 +59,13 @@ public class MarsRover {
     }
 
     private void move() {
-        if(direction.equals("N")) {
+        if(direction.equals(NORTH)) {
             locationY++;
-        } else if (direction.equals("S")) {
+        } else if (direction.equals(SOUTH)) {
             locationY--;
-        } else if (direction.equals("W")) {
+        } else if (direction.equals(WEST)) {
             locationX--;
-        } else if (direction.equals("E")) {
+        } else if (direction.equals(EAST)) {
             locationX++;
         }
     }
