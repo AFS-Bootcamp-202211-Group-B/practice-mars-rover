@@ -85,6 +85,7 @@ class MarsRoverTest {
         assertEquals(0, marsRover.getLocationY());
         assertEquals("S", marsRover.getDirection());
     }
+
     @Test
     void should_n10W_given_init_00W_and_command_M() {
         MarsRover marsRover = new MarsRover("N");
@@ -109,6 +110,15 @@ class MarsRoverTest {
         marsRover.executeCommand("R");
         assertEquals(0, marsRover.getLocationX());
         assertEquals(0, marsRover.getLocationY());
+        assertEquals("N", marsRover.getDirection());
+    }
+
+    @Test
+    void should_n11N_given_init_00W_and_command_MLMR() {
+        MarsRover marsRover = new MarsRover("N");
+        marsRover.executeBatchCommands("MLMR");
+        assertEquals(-1, marsRover.getLocationX());
+        assertEquals(1, marsRover.getLocationY());
         assertEquals("N", marsRover.getDirection());
     }
 }
