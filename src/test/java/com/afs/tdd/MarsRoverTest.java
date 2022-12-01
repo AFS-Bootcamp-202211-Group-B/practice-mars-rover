@@ -39,7 +39,7 @@ class MarsRoverTest {
         //when
         marsRover.executeBatchCommands(Command.M);
         //then
-        assertEquals(0xffffffff, marsRover.getLocationX());
+        assertEquals(0xffffffff, marsRover.getLocationY());
     }
     
 }
