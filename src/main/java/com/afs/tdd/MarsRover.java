@@ -10,6 +10,8 @@ public class MarsRover {
         this.y=y;
         this.direction=direction;
     }
+    
+    
 
     public void executeCommand(String command) {
         switch(command){
@@ -95,5 +97,9 @@ public class MarsRover {
 
     public String getDirection() {
         return this.direction;
+    }
+
+    public void executeBatchCommands(String commands) {
+
     }
 }
