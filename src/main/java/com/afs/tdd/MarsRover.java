@@ -20,6 +20,8 @@ public class MarsRover {
     private void move() {
         if(direction.equals("N")) {
             locationY++;
+        } else if (direction.equals("S")) {
+            locationY--;
         }
     }
 
