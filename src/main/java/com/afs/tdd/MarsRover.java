@@ -24,15 +24,60 @@ public class MarsRover {
     }
 
     private void move(String command) {
-
+        switch (command) {
+            case "N":
+                locationY += 1;
+                break;
+            case "E":
+                locationX += 1;
+                break;
+            case "S":
+                locationY -= 1;
+                break;
+            case "W":
+                locationX -= 1;
+                break;
+            default:
+                return;
+        }
     }
 
-    private String turnLeft(String direction) {
-        return "";
+    private void turnLeft(String direction) {
+        switch (direction) {
+            case "N":
+                this.direction = "W";
+                break;
+            case "E":
+                this.direction = "N";
+                break;
+            case "S":
+                this.direction = "E";
+                break;
+            case "W":
+                this.direction = "S";
+                break;
+            default:
+                return;
+        }
     }
 
-    private String turnRight(String direction) {
-        return "";
+    private void turnRight(String direction) {
+        switch (direction) {
+            case "N":
+                this.direction = "E";
+                break;
+            case "E":
+                this.direction = "S";
+                break;
+            case "S":
+                this.direction = "W";
+                break;
+            case "W":
+                this.direction = "N";
+                break;
+            default:
+                return;
+        }
     }
 
     public int getLocationX() {
