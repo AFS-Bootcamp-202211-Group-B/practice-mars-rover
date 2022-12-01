@@ -22,4 +22,13 @@ class MarsRoverTest {
         assertEquals(0, marsRover.getLocationY());
         assertEquals("W", marsRover.getDirection());
     }
+
+    @Test
+    void should_00E_given_init_00N_and_command_R() {
+        MarsRover marsRover = new MarsRover("N");
+        marsRover.executeCommand("R");
+        assertEquals(0, marsRover.getLocationX());
+        assertEquals(0, marsRover.getLocationY());
+        assertEquals("E", marsRover.getDirection());
+    }
 }
