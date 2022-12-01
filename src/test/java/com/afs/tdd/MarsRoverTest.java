@@ -119,7 +119,7 @@ class MarsRoverTest {
     @Test
     void should_return_negative1_1_N_when_executeCommand_given_0_0_N_MLMR() {
         //given
-        MarsRover marsRover = new MarsRover(0, 0, Direction.W);
+        MarsRover marsRover = new MarsRover(0, 0, Direction.N);
         List<Command> commands = Arrays.asList(Command.M, Command.L, Command.M, Command.R);
         //when
         marsRover.executeBatchCommands(commands);

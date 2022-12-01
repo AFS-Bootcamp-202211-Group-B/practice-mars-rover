@@ -1,5 +1,7 @@
 package com.afs.tdd;
 
+import java.util.List;
+
 public class MarsRover {
     private int locationX;
     private int locationY;
@@ -12,7 +14,11 @@ public class MarsRover {
     }
 
     public void executeBatchCommands(List<Command> commands) {
+        commands.forEach(this::executeCommands);
+    }
 
+    public void executeBatchCommands(Command command) {
+        executeCommands(command);
     }
 
     public void executeCommands(Command command) {
