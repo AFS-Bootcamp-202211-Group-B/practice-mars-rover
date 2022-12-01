@@ -95,4 +95,13 @@ class MarsRoverTest {
         //then
         assertEquals(0xffffffff, marsRover.getLocationX());
     }
+    @Test
+    void should_return_0_0_S_when_executeCommand_given_0_0_W_L() {
+        //given
+        MarsRover marsRover = new MarsRover(0, 0, Direction.W);
+        //when
+        marsRover.executeBatchCommands(Command.L);
+        //then
+        assertEquals(Direction.S, marsRover.getDirection());
+    }
 }
