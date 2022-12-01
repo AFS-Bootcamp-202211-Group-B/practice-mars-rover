@@ -23,6 +23,8 @@ public class MarsRover {
     private void turnLeft() {
         if(direction.equals("N")){
             setDirection("W");
+        } else if (direction.equals("S")) {
+            setDirection("E");
         }
     }
 
