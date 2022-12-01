@@ -1,5 +1,10 @@
 package com.afs.tdd;
 
+import java.util.Arrays;
+import java.util.List;
+
+import static java.nio.file.Files.move;
+
 public class MarsRover {
     public static final String MOVE = "M";
     public static final String LEFT = "L";
@@ -19,15 +24,18 @@ public class MarsRover {
     }
 
     public void executeBatchCommand(String command) {
-        if(command.equals(MOVE)){
-            move();
-        }
-        if(command.equals(LEFT)){
-            turnLeft();
-        }
-        if(command.equals(RIGHT)){
-            turnRight();
-        }
+        List<String> splitCommands = Arrays.asList(command.split(""));
+        splitCommands.stream().forEach(splitCommand -> {
+            if(splitCommand.equals(MOVE)){
+                move();
+            }
+            else if(splitCommand.equals(LEFT)){
+                turnLeft();
+            }
+            else if(splitCommand.equals(RIGHT)) {
+                turnRight();
+            }
+        });
     }
 
     private void turnRight() {
