@@ -12,9 +12,31 @@ public class MarsRover {
     }
 
     public void executeBatchCommands(String command) {
+        switch (command){
+            case "M": {
+                moveForward(locationX, locationY, direction);
+                break;
+            }
+        }
+    }
+
+    private void moveForward(int locationX, int locationY, String direction) {
+        switch (direction){
+            case "N": {
+                addLocationY();
+                break;
+            }
+        }
+    }
+    private void addLocationY() {
+        this.locationY++;
     }
 
     public int getLocationX() {
         return 0;
+    }
+
+    public int getLocationY() {
+        return locationY;
     }
 }
