@@ -100,6 +100,8 @@ public class MarsRover {
     }
 
     public void executeBatchCommands(String commands) {
-
+        commands.chars()
+                .mapToObj(command -> new Character((char) command).toString())
+                .forEachOrdered(command -> executeCommand(command));
     }
 }
