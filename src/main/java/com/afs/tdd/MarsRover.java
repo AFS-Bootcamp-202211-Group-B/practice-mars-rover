@@ -39,4 +39,8 @@ public class MarsRover {
     public int getLocationY() {
         return locationY;
     }
+
+    public Direction getDirection() {
+        return this.direction;
+    }
 }
