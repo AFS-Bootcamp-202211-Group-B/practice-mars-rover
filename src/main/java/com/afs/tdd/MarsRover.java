@@ -21,6 +21,19 @@ public class MarsRover {
                 turnLeft();
                 break;
             }
+            case R: {
+                turnRight();
+                break;
+            }
+        }
+    }
+
+    private void turnRight() {
+        switch (direction){
+            case N : {
+                direction = Direction.E;
+                break;
+            }
         }
     }
 
