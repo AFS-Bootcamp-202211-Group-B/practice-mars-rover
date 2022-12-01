@@ -62,7 +62,7 @@ class MarsRoverTest {
     @Test
     void should_return_1_0_E_when_executeCommand_given_0_0_E_M() {
         //given
-        MarsRover marsRover = new MarsRover(0, 0, Direction.S);
+        MarsRover marsRover = new MarsRover(0, 0, Direction.E);
         //when
         marsRover.executeBatchCommands(Command.M);
         //then

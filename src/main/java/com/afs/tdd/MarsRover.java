@@ -14,7 +14,7 @@ public class MarsRover {
     public void executeBatchCommands(Command command) {
         switch (command){
             case M: {
-                moveForward(locationX, locationY, direction);
+                moveForward();
                 break;
             }
             case L: {
@@ -41,7 +41,7 @@ public class MarsRover {
         }
     }
 
-    private void moveForward(int locationX, int locationY, Direction direction) {
+    private void moveForward() {
         switch (direction){
             case N: {
                 addLocationY();
@@ -51,7 +51,15 @@ public class MarsRover {
                 minusLocationY();
                 break;
             }
+            case E: {
+                addLocationX();
+                break;
+            }
         }
+    }
+
+    private void addLocationX() {
+        this.locationX++;
     }
 
     private void minusLocationY() {
@@ -76,7 +84,7 @@ public class MarsRover {
     }
 
     public int getLocationX() {
-        return 0;
+        return locationX;
     }
 
     public int getLocationY() {
