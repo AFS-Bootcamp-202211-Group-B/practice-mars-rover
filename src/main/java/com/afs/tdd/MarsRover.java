@@ -17,6 +17,10 @@ public class MarsRover {
                 moveForward(locationX, locationY, direction);
                 break;
             }
+            case L: {
+                turnLeft();
+                break;
+            }
         }
     }
 
@@ -28,6 +32,16 @@ public class MarsRover {
             }
         }
     }
+
+    private void turnLeft() {
+        switch (direction){
+            case N : {
+                direction = Direction.W;
+                break;
+            }
+        }
+    }
+
     private void addLocationY() {
         this.locationY++;
     }
