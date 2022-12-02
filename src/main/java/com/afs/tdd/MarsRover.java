@@ -4,13 +4,13 @@ import java.util.Arrays;
 import java.util.List;
 
 public class MarsRover {
-    protected static final String MOVE = "M";
-    protected static final String LEFT = "L";
-    protected static final String RIGHT = "R";
-    protected static final String NORTH = "N";
-    protected static final String EAST = "E";
-    protected static final String SOUTH = "S";
-    protected static final String WEST = "W";
+    private static final String MOVE = "M";
+    private static final String LEFT = "L";
+    private static final String RIGHT = "R";
+    private static final String NORTH = "N";
+    private static final String EAST = "E";
+    private static final String SOUTH = "S";
+    private static final String WEST = "W";
     private int locationX;
     private int locationY;
     private String direction;
